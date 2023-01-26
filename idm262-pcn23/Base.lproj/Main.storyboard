@@ -66,26 +66,31 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruD-oD-19U">
                                 <rect key="frame" x="159" y="83" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NU8-sG-IvM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ew" translatesAutoresizingMaskIntoConstraints="NO" id="tPz-cD-7oJ">
-                                <rect key="frame" x="121" y="130" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ew" translatesAutoresizingMaskIntoConstraints="NO" id="tPz-cD-7oJ">
+                                <rect key="frame" x="121" y="128" width="151" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="RzC-a4-TVg"/>
+                                    <constraint firstAttribute="width" constant="151" id="9VH-P7-WKO"/>
+                                    <constraint firstAttribute="height" constant="150" id="t6L-QZ-Mxh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="db9-oS-BgE"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="leading" secondItem="db9-oS-BgE" secondAttribute="leading" constant="121" id="A7H-4c-cFB"/>
-                            <constraint firstItem="ruD-oD-19U" firstAttribute="centerX" secondItem="sEG-2k-cWw" secondAttribute="centerX" id="N7b-PA-zzF"/>
-                            <constraint firstItem="ruD-oD-19U" firstAttribute="top" secondItem="db9-oS-BgE" secondAttribute="top" constant="24" id="XXL-ib-Wbd"/>
-                            <constraint firstItem="ruD-oD-19U" firstAttribute="leading" secondItem="db9-oS-BgE" secondAttribute="leading" constant="159" id="a14-hl-EXI"/>
-                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="top" secondItem="ruD-oD-19U" secondAttribute="bottom" constant="26" id="rYS-o0-kHN"/>
-                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="centerX" secondItem="ruD-oD-19U" secondAttribute="centerX" id="tpP-57-H9u"/>
+                            <constraint firstItem="ruD-oD-19U" firstAttribute="top" secondItem="db9-oS-BgE" secondAttribute="top" constant="24" id="7xB-6z-sr2"/>
+                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="leading" secondItem="db9-oS-BgE" secondAttribute="leading" constant="121" id="Avx-1H-Qcl"/>
+                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="centerX" secondItem="ruD-oD-19U" secondAttribute="centerX" id="TP9-l2-EMY"/>
+                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="centerX" secondItem="sEG-2k-cWw" secondAttribute="centerX" id="Wbh-16-nVT"/>
+                            <constraint firstItem="db9-oS-BgE" firstAttribute="bottom" secondItem="tPz-cD-7oJ" secondAttribute="bottom" constant="491" id="daG-qK-svK"/>
+                            <constraint firstItem="ruD-oD-19U" firstAttribute="leading" secondItem="db9-oS-BgE" secondAttribute="leading" constant="159" id="qsc-w5-KE0"/>
+                            <constraint firstItem="tPz-cD-7oJ" firstAttribute="top" secondItem="ruD-oD-19U" secondAttribute="bottom" constant="24" id="rJ7-OG-rss"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="people" selectedImage="people" id="Fv3-yI-unY"/>
@@ -108,13 +113,27 @@
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-ng-AGs">
+                                <rect key="frame" x="320" y="175" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-6s-S1a">
+                                <rect key="frame" x="24" y="180" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="0E8-P6-Ffg"/>
-                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Bno-32-HoA"/>
-                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DqA-Vj-7PM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8s2-ng-AGs" secondAttribute="trailing" constant="24" id="5a5-Ke-m39"/>
+                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="5a9-KG-r6t"/>
+                            <constraint firstItem="8s2-ng-AGs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="OmS-8X-1Tg"/>
+                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="RcF-IQ-724"/>
+                            <constraint firstItem="vNC-6s-S1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="XhH-Lf-TQm"/>
+                            <constraint firstItem="vNC-6s-S1a" firstAttribute="centerY" secondItem="8s2-ng-AGs" secondAttribute="centerY" id="aqC-PK-yUB"/>
+                            <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cfp-q5-g9f"/>
+                            <constraint firstItem="8s2-ng-AGs" firstAttribute="leading" secondItem="vNC-6s-S1a" secondAttribute="trailing" constant="200" id="x8s-5J-gWU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="pGY-Qq-xbb"/>
@@ -130,10 +149,10 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="people" width="30" height="30"/>
         <namedColor name="Background">
-            <color red="0.87843137979507446" green="0.88235294818878174" blue="0.96470588445663452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.87800002098083496" green="0.88200008869171143" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Primary">
-            <color red="0.46274509803921571" green="0.4392156862745098" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46299999952316284" green="0.43900001049041748" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
