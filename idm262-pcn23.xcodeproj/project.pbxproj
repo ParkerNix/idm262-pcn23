@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4A7FE2E298BF9070099FCC9 /* OpenSans in Resources */ = {isa = PBXBuildFile; fileRef = A4A7FE2D298BF9060099FCC9 /* OpenSans */; };
+		A4A7FE30298C0FCC0099FCC9 /* OpenSans in Resources */ = {isa = PBXBuildFile; fileRef = A4A7FE2D298BF9060099FCC9 /* OpenSans */; };
 		A4D0DDBB2982C936005CC134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0DDBA2982C936005CC134 /* AppDelegate.swift */; };
 		A4D0DDBD2982C936005CC134 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0DDBC2982C936005CC134 /* SceneDelegate.swift */; };
 		A4D0DDBF2982C936005CC134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0DDBE2982C936005CC134 /* ViewController.swift */; };
@@ -42,7 +42,6 @@
 		A4D0DDAE2982C936005CC134 = {
 			isa = PBXGroup;
 			children = (
-				A4A7FE2D298BF9060099FCC9 /* OpenSans */,
 				A4D0DDB92982C936005CC134 /* idm262-pcn23 */,
 				A4D0DDB82982C936005CC134 /* Products */,
 			);
@@ -66,6 +65,7 @@
 				A4D0DDC32982C937005CC134 /* Assets.xcassets */,
 				A4D0DDC52982C937005CC134 /* LaunchScreen.storyboard */,
 				A4D0DDC82982C937005CC134 /* Info.plist */,
+				A4A7FE2D298BF9060099FCC9 /* OpenSans */,
 			);
 			path = "idm262-pcn23";
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 				A4D0DDC72982C937005CC134 /* LaunchScreen.storyboard in Resources */,
 				A4D0DDC42982C937005CC134 /* Assets.xcassets in Resources */,
 				A4D0DDC22982C936005CC134 /* Main.storyboard in Resources */,
-				A4A7FE2E298BF9070099FCC9 /* OpenSans in Resources */,
+				A4A7FE30298C0FCC0099FCC9 /* OpenSans in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
