@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="OpenSans-Bold.ttf">
-            <string>OpenSans-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--TBC-->
         <scene sceneID="uUM-Zl-9kv">
@@ -40,36 +35,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1d6-gX-os3">
-                                <rect key="frame" x="161" y="83" width="71" height="33"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
+                                <rect key="frame" x="162.66666666666666" y="83" width="68" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, Parker!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jar-DX-ukN">
-                                <rect key="frame" x="24" y="147" width="219" height="21"/>
+                                <rect key="frame" x="24" y="142.66666666666666" width="219" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-fw-s2X">
-                                <rect key="frame" x="24" y="176" width="345" height="150"/>
+                                <rect key="frame" x="24" y="192.66666666666663" width="345" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0i2-SR-fvQ"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="What's on your mind?">
-                                        <attributes>
-                                            <color key="NSColor" name="Primary"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBF-B8-mfe">
-                                <rect key="frame" x="250" y="338" width="119" height="31"/>
+                                <rect key="frame" x="250" y="354.66666666666669" width="119" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add entry">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
@@ -78,13 +65,13 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your log entries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qj-vg-oo8">
-                                <rect key="frame" x="24" y="393" width="169" height="21"/>
+                                <rect key="frame" x="24" y="409.66666666666669" width="169" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.bubble.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bff-UF-YGg">
-                                <rect key="frame" x="157" y="427.33333333333331" width="79" height="78"/>
+                                <rect key="frame" x="157" y="444" width="79" height="78.000000000000057"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="jAP-Lv-fSx"/>
@@ -92,20 +79,26 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-2Y-BNW">
-                                <rect key="frame" x="171" y="517" width="51" height="29"/>
+                                <rect key="frame" x="171" y="533.66666666666663" width="51" height="29"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any log entries yet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIc-aR-rBy">
-                                <rect key="frame" x="73.666666666666686" y="558" width="246" height="18.666666666666629"/>
+                                <rect key="frame" x="73.666666666666686" y="574.66666666666663" width="246" height="18.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get up there and make one!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD4-kf-89p">
-                                <rect key="frame" x="96.666666666666671" y="576.66666666666663" width="199.66666666666663" height="18.666666666666629"/>
+                                <rect key="frame" x="96.666666666666671" y="593.33333333333337" width="199.66666666666663" height="18.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="Primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOD-1X-iqc">
+                                <rect key="frame" x="24" y="163.66666666666666" width="159" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -116,6 +109,7 @@
                             <constraint firstItem="kIc-aR-rBy" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" id="4qK-l4-JeJ"/>
                             <constraint firstItem="Erl-fw-s2X" firstAttribute="centerX" secondItem="1d6-gX-os3" secondAttribute="centerX" id="6cr-Ev-uLu"/>
                             <constraint firstItem="lBF-B8-mfe" firstAttribute="top" secondItem="Erl-fw-s2X" secondAttribute="bottom" constant="12" id="9i1-S6-A60"/>
+                            <constraint firstItem="Di5-qw-eAN" firstAttribute="trailing" secondItem="LOD-1X-iqc" secondAttribute="trailing" constant="210" id="DaI-La-Rkk"/>
                             <constraint firstItem="KD4-kf-89p" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" id="Ecx-V3-iU5"/>
                             <constraint firstItem="Jar-DX-ukN" firstAttribute="top" secondItem="1d6-gX-os3" secondAttribute="bottom" constant="31" id="LbL-DO-P8m"/>
                             <constraint firstItem="lBF-B8-mfe" firstAttribute="trailing" secondItem="Erl-fw-s2X" secondAttribute="trailing" id="Md7-Uw-SWS"/>
@@ -125,15 +119,17 @@
                             <constraint firstItem="KD4-kf-89p" firstAttribute="top" secondItem="kIc-aR-rBy" secondAttribute="bottom" id="UPV-4T-kek"/>
                             <constraint firstItem="Di5-qw-eAN" firstAttribute="trailing" secondItem="3Qj-vg-oo8" secondAttribute="trailing" constant="200" id="ZPE-nL-BG1"/>
                             <constraint firstItem="bff-UF-YGg" firstAttribute="top" secondItem="3Qj-vg-oo8" secondAttribute="bottom" constant="12" id="Zas-id-gzJ"/>
+                            <constraint firstItem="LOD-1X-iqc" firstAttribute="leading" secondItem="Jar-DX-ukN" secondAttribute="leading" id="eHI-Rk-LhR"/>
                             <constraint firstItem="vJP-2Y-BNW" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" id="f9S-iQ-Bno"/>
                             <constraint firstItem="Jar-DX-ukN" firstAttribute="leading" secondItem="Di5-qw-eAN" secondAttribute="leading" constant="24" id="fK0-EP-sTF"/>
                             <constraint firstItem="3Qj-vg-oo8" firstAttribute="top" secondItem="lBF-B8-mfe" secondAttribute="bottom" constant="24" id="j2u-Ra-iw7"/>
                             <constraint firstItem="bff-UF-YGg" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" id="lbH-Be-ooq"/>
                             <constraint firstItem="lBF-B8-mfe" firstAttribute="leading" secondItem="Di5-qw-eAN" secondAttribute="leading" constant="250" id="lup-Bb-el7"/>
-                            <constraint firstItem="Erl-fw-s2X" firstAttribute="top" secondItem="Jar-DX-ukN" secondAttribute="bottom" constant="8" id="mtj-f8-y3f"/>
+                            <constraint firstItem="Erl-fw-s2X" firstAttribute="top" secondItem="LOD-1X-iqc" secondAttribute="bottom" constant="12" id="mtj-f8-y3f"/>
                             <constraint firstItem="3Qj-vg-oo8" firstAttribute="leading" secondItem="Erl-fw-s2X" secondAttribute="leading" id="qng-iH-OtV"/>
                             <constraint firstItem="Di5-qw-eAN" firstAttribute="trailing" secondItem="Jar-DX-ukN" secondAttribute="trailing" constant="150" id="s6B-7t-nrg"/>
                             <constraint firstItem="Erl-fw-s2X" firstAttribute="leading" secondItem="Di5-qw-eAN" secondAttribute="leading" constant="24" id="tzU-wx-tJR"/>
+                            <constraint firstItem="LOD-1X-iqc" firstAttribute="top" secondItem="Jar-DX-ukN" secondAttribute="bottom" id="v3S-wZ-S5z"/>
                             <constraint firstItem="vJP-2Y-BNW" firstAttribute="top" secondItem="bff-UF-YGg" secondAttribute="bottom" constant="12" id="vca-DU-iDy"/>
                         </constraints>
                     </view>
