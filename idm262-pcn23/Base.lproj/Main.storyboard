@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -146,89 +145,84 @@
                                 <color key="textColor" name="Primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-pF-7zc">
-                                <rect key="frame" x="24" y="141.66666666666666" width="345" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WHt-k0-Lyf">
+                                <rect key="frame" x="24" y="141.66666666666663" width="345" height="175.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-6s-S1a">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="31"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" name="Primary"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-ng-AGs">
-                                        <rect key="frame" x="296" y="0.0" width="51" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="197" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-pF-7zc">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-6s-S1a">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-ng-AGs">
+                                                <rect key="frame" x="296" y="0.0" width="51" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="Ycn-7R-c2c"/>
+                                                </constraints>
+                                                <color key="onTintColor" name="Primary"/>
+                                                <color key="thumbTintColor" name="Background"/>
+                                            </switch>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="49" id="Ycn-7R-c2c"/>
+                                            <constraint firstItem="8s2-ng-AGs" firstAttribute="top" secondItem="cDI-pF-7zc" secondAttribute="top" id="4x1-2h-IGq"/>
+                                            <constraint firstAttribute="trailing" secondItem="8s2-ng-AGs" secondAttribute="trailing" id="8mG-n7-s6x"/>
+                                            <constraint firstItem="vNC-6s-S1a" firstAttribute="leading" secondItem="cDI-pF-7zc" secondAttribute="leading" id="LxH-e6-47o"/>
+                                            <constraint firstItem="vNC-6s-S1a" firstAttribute="top" secondItem="cDI-pF-7zc" secondAttribute="top" id="Omg-IA-woL"/>
                                         </constraints>
-                                        <color key="onTintColor" name="Primary"/>
-                                        <color key="thumbTintColor" name="Background"/>
-                                    </switch>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="8s2-ng-AGs" firstAttribute="top" secondItem="cDI-pF-7zc" secondAttribute="top" id="4x1-2h-IGq"/>
-                                    <constraint firstAttribute="trailing" secondItem="8s2-ng-AGs" secondAttribute="trailing" id="8mG-n7-s6x"/>
-                                    <constraint firstItem="vNC-6s-S1a" firstAttribute="leading" secondItem="cDI-pF-7zc" secondAttribute="leading" id="LxH-e6-47o"/>
-                                    <constraint firstItem="vNC-6s-S1a" firstAttribute="top" secondItem="cDI-pF-7zc" secondAttribute="top" id="Omg-IA-woL"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-0Y-zgC">
-                                <rect key="frame" x="24" y="254.66666666666663" width="345" height="31"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-Sm-ktp">
-                                        <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="31"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" name="Primary"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02Z-Cl-epu">
-                                        <rect key="frame" x="237.66666666666671" y="0.0" width="107.33333333333334" height="31"/>
-                                        <menu key="menu" id="KAP-I5-1b2">
-                                            <children>
-                                                <command title="Daily" id="n0v-JE-kv0"/>
-                                                <command title="Weekly" id="3YC-ri-Ly4"/>
-                                            </children>
-                                        </menu>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="I'd like...">
-                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                            <color key="baseBackgroundColor" name="Primary"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zah-PI-cCP">
-                                <rect key="frame" x="24" y="196.66666666666666" width="345" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx4-jK-WsJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" name="Primary"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What can we call you?" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrd-gN-JWX">
-                                        <rect key="frame" x="108.66666666666664" y="0.0" width="236.33333333333337" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" name="Primary"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" textContentType="nickname"/>
-                                    </textField>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6nn-4f-o2z">
+                                        <rect key="frame" x="0.0" y="55" width="345" height="62.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often would you like notifications?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-Sm-ktp">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-SB-feQ">
+                                                <rect key="frame" x="0.0" y="31.333333333333343" width="345" height="32"/>
+                                                <color key="backgroundColor" name="Background"/>
+                                                <segments>
+                                                    <segment title="Once a week"/>
+                                                    <segment title="Once a day"/>
+                                                    <segment title="Twice a day"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="Background"/>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zah-PI-cCP">
+                                        <rect key="frame" x="0.0" y="141.33333333333334" width="345" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx4-jK-WsJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What can we call you?" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrd-gN-JWX">
+                                                <rect key="frame" x="108.66666666666664" y="0.0" width="236.33333333333337" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" textContentType="nickname"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="zah-PI-cCP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="3Np-yh-dP7"/>
-                            <constraint firstItem="cDI-pF-7zc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="7j7-Uz-ufW"/>
-                            <constraint firstItem="ieV-0Y-zgC" firstAttribute="top" secondItem="zah-PI-cCP" secondAttribute="bottom" constant="24" id="QPO-VK-ODv"/>
-                            <constraint firstItem="cDI-pF-7zc" firstAttribute="top" secondItem="Zmy-Ip-Fk2" secondAttribute="bottom" constant="30" id="R4G-zv-pD2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHt-k0-Lyf" secondAttribute="trailing" constant="24" id="6p3-0q-j6U"/>
                             <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="RcF-IQ-724"/>
                             <constraint firstItem="Zmy-Ip-Fk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cfp-q5-g9f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zah-PI-cCP" secondAttribute="trailing" constant="24" id="mgd-XY-SXV"/>
-                            <constraint firstItem="ieV-0Y-zgC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sGq-0K-IW7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieV-0Y-zgC" secondAttribute="trailing" constant="24" id="wKN-dE-UZe"/>
-                            <constraint firstItem="zah-PI-cCP" firstAttribute="top" secondItem="cDI-pF-7zc" secondAttribute="bottom" constant="24" id="y8C-Z8-T8v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDI-pF-7zc" secondAttribute="trailing" constant="24" id="yKe-pA-Qko"/>
+                            <constraint firstItem="WHt-k0-Lyf" firstAttribute="top" secondItem="Zmy-Ip-Fk2" secondAttribute="bottom" constant="30" id="pCo-YQ-ahP"/>
+                            <constraint firstItem="WHt-k0-Lyf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sVa-LT-Gzx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="pencil.circle" catalog="system" id="pGY-Qq-xbb"/>
