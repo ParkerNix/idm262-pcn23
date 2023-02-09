@@ -184,7 +184,7 @@
                                                     <segment title="Once a day"/>
                                                     <segment title="Twice a day"/>
                                                 </segments>
-                                                <color key="selectedSegmentTintColor" name="Background"/>
+                                                <color key="selectedSegmentTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
