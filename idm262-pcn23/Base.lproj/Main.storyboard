@@ -12,6 +12,7 @@
         <scene sceneID="uUM-Zl-9kv">
             <objects>
                 <tabBarController title="TBC" id="mZ8-hw-Ngy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kFF-q0-k6K"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xKW-Ix-yES">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,12 +20,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="jnh-uN-Q3Z" kind="relationship" relationship="viewControllers" id="J2H-Nf-xEC"/>
+                        <segue destination="C7U-yy-PYi" kind="relationship" relationship="viewControllers" id="2Xn-HJ-5rR"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CwB-ob-QMH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3J-bh-xgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1321" y="-325"/>
+            <point key="canvasLocation" x="-1321" y="-329"/>
         </scene>
         <!--Home-->
         <scene sceneID="D4s-tO-w4h">
@@ -130,6 +132,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK1-Xe-YYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2231.2977099236641" y="405.63380281690144"/>
+        </scene>
+        <!--Entries-->
+        <scene sceneID="a3E-Y5-LQ3">
+            <objects>
+                <viewController title="Entries" id="C7U-yy-PYi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8VU-n2-bv8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-KJ-QXT">
+                                <rect key="frame" x="24" y="107.00000000000003" width="345" height="372.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your log entries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-Si-RnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" name="Primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cgc-Ze-6nd">
+                                        <rect key="frame" x="0.0" y="52.666666666666657" width="345" height="148"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/12/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-wE-Vb2">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWn-b5-bC7">
+                                                <rect key="frame" x="0.0" y="32.000000000000007" width="345" height="74.666666666666686"/>
+                                                <string key="text">Today was my birthday! everything was great. We went to diiner and got drinks and seafood. I'm so happy I could spend the day with my besties &lt;3</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-kp-xz5">
+                                                <rect key="frame" x="0.0" y="114.66666666666664" width="345" height="33.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-WJ-uvd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="33.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Edit">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="baseForegroundColor" name="Background"/>
+                                                            <color key="baseBackgroundColor" name="Primary"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezC-OI-eCO">
+                                                        <rect key="frame" x="176.66666666666663" y="0.0" width="168.33333333333337" height="33.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="baseForegroundColor" name="Background"/>
+                                                            <color key="baseBackgroundColor" red="0.79349031352905286" green="0.21115098904062818" blue="0.20894913510842758" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-Cx-mJz">
+                                        <rect key="frame" x="0.0" y="224.66666666666669" width="345" height="148"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/10/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fe-A1-gs4">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-Qq-rPA">
+                                                <rect key="frame" x="0.0" y="32.000000000000007" width="345" height="74.666666666666686"/>
+                                                <string key="text">I'm so excited for going out on Sunday! I've had so much to do so it'll be nice to have a break from it all. I'm hoping for a new sweatshirt and a new mug!</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-me-6Kf">
+                                                <rect key="frame" x="0.0" y="114.66666666666661" width="345" height="33.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NU-Ln-tQj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="33.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Edit">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="baseForegroundColor" name="Background"/>
+                                                            <color key="baseBackgroundColor" name="Primary"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKW-hF-2rh">
+                                                        <rect key="frame" x="176.66666666666663" y="0.0" width="168.33333333333337" height="33.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="baseForegroundColor" name="Background"/>
+                                                            <color key="baseBackgroundColor" red="0.79349031349999999" green="0.21115098900000001" blue="0.20894913509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aty-VB-iS4"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="8ie-KJ-QXT" firstAttribute="top" secondItem="aty-VB-iS4" secondAttribute="top" constant="48" id="H2D-9u-k16"/>
+                            <constraint firstItem="8ie-KJ-QXT" firstAttribute="leading" secondItem="aty-VB-iS4" secondAttribute="leading" constant="24" id="dw4-b9-Zxq"/>
+                            <constraint firstAttribute="trailing" secondItem="8ie-KJ-QXT" secondAttribute="trailing" constant="24" id="fgV-LQ-VRj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Entries" image="bookmark" catalog="system" selectedImage="bookmark" id="iNw-oO-VbO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVc-XM-gLz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1321.3740458015266" y="405.63380281690144"/>
         </scene>
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
@@ -270,6 +388,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <image name="questionmark.bubble.fill" catalog="system" width="128" height="110"/>
