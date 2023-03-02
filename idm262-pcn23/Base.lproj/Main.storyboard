@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--TBC-->
         <scene sceneID="uUM-Zl-9kv">
@@ -22,11 +27,101 @@
                         <segue destination="jnh-uN-Q3Z" kind="relationship" relationship="viewControllers" id="J2H-Nf-xEC"/>
                         <segue destination="C7U-yy-PYi" kind="relationship" relationship="viewControllers" id="2Xn-HJ-5rR"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CwB-ob-QMH"/>
+                        <segue destination="GbN-QS-ffv" kind="relationship" relationship="viewControllers" id="siq-du-Oel"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3J-bh-xgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1321" y="-329"/>
+        </scene>
+        <!--Log table-->
+        <scene sceneID="Fcg-tG-Fcl">
+            <objects>
+                <tableViewController title="Log table" id="L0V-3r-NNE" customClass="LogTableViewController" customModule="idm262_pcn23" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IO9-SN-GRc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cello" id="E0g-cc-nfK">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0g-cc-nfK" id="269-ZG-6S1">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96443592418323865" green="0.9602031574382649" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L0V-3r-NNE" id="6Gd-Jk-XhX"/>
+                            <outlet property="delegate" destination="L0V-3r-NNE" id="OZh-ET-1oP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Log table" id="bmE-ko-laI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nZV-ph-3QS">
+                            <color key="tintColor" name="Primary"/>
+                            <connections>
+                                <action selector="addLogFunction:" destination="L0V-3r-NNE" id="FWO-e7-avM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="hVy-76-ifT" kind="show" identifier="showDetail" id="wC3-Sr-L70"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGQ-Ih-lrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="-338"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="SjW-Lp-pJw">
+            <objects>
+                <viewController title="Detail" id="hVy-76-ifT" customClass="DetailViewController" customModule="idm262_pcn23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fs-qI-ur8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF0-BQ-9tV">
+                                <rect key="frame" x="24" y="135" width="219" height="33"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
+                                <color key="textColor" name="Primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pi7-Lf-N5E"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="fF0-BQ-9tV" firstAttribute="top" secondItem="pi7-Lf-N5E" secondAttribute="top" constant="32" id="7AZ-aV-apQ"/>
+                            <constraint firstItem="pi7-Lf-N5E" firstAttribute="trailing" secondItem="fF0-BQ-9tV" secondAttribute="trailing" constant="150" id="Wk3-xe-JoV"/>
+                            <constraint firstItem="fF0-BQ-9tV" firstAttribute="leading" secondItem="pi7-Lf-N5E" secondAttribute="leading" constant="24" id="ZyK-xV-tex"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rkA-6L-Uo7"/>
+                    <connections>
+                        <outlet property="titlePlace" destination="fF0-BQ-9tV" id="UNO-8P-gkL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBe-k5-9hU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="-338"/>
+        </scene>
+        <!--Logs-->
+        <scene sceneID="Jfj-92-yJP">
+            <objects>
+                <navigationController title="Logs" id="GbN-QS-ffv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Logs" image="tablecells" catalog="system" selectedImage="tablecells" id="UFx-A6-SyW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q2-Oy-MMs">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L0V-3r-NNE" kind="relationship" relationship="rootViewController" id="y6X-1D-HBV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7k1-NC-lRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-363" y="-338"/>
         </scene>
         <!--Home-->
         <scene sceneID="D4s-tO-w4h">
@@ -426,6 +521,7 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <image name="questionmark.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.090000003576278687" green="0.33199995756149292" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
