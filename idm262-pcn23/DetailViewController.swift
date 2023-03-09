@@ -34,3 +34,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+

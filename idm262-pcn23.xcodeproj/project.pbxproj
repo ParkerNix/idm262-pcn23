@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A4108A75299E746200B01B2C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4108A74299E746200B01B2C /* HomeController.swift */; };
+		A447FE8229BA288600454027 /* CelloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447FE8129BA288600454027 /* CelloTableViewCell.swift */; };
+		A447FE8529BA2DC700454027 /* ANTModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A447FE8329BA2DC700454027 /* ANTModel.xcdatamodeld */; };
 		A474779D29A7B56B00D5FA92 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A474779229A7B56B00D5FA92 /* TitilliumWeb-Black.ttf */; };
 		A474779E29A7B56B00D5FA92 /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A474779329A7B56B00D5FA92 /* TitilliumWeb-Bold.ttf */; };
 		A474779F29A7B56B00D5FA92 /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A474779429A7B56B00D5FA92 /* TitilliumWeb-Regular.ttf */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		A4108A74299E746200B01B2C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		A447FE8129BA288600454027 /* CelloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelloTableViewCell.swift; sourceTree = "<group>"; };
+		A447FE8429BA2DC700454027 /* ANTModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ANTModel.xcdatamodel; sourceTree = "<group>"; };
 		A474779229A7B56B00D5FA92 /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
 		A474779329A7B56B00D5FA92 /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
 		A474779429A7B56B00D5FA92 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
@@ -147,10 +151,12 @@
 		A4D0DDB92982C936005CC134 /* idm262-pcn23 */ = {
 			isa = PBXGroup;
 			children = (
+				A447FE8129BA288600454027 /* CelloTableViewCell.swift */,
 				A4D0DDBA2982C936005CC134 /* AppDelegate.swift */,
 				A4D0DDBC2982C936005CC134 /* SceneDelegate.swift */,
 				A4D0DDBE2982C936005CC134 /* ViewController.swift */,
 				A4D0DDC02982C936005CC134 /* Main.storyboard */,
+				A447FE8329BA2DC700454027 /* ANTModel.xcdatamodeld */,
 				A4B38FF529B0F08A00866F3E /* LogTableViewController.swift */,
 				A4B38FF729B1001100866F3E /* DetailViewController.swift */,
 				A47477C129A7B8D400D5FA92 /* sounds */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A447FE8229BA288600454027 /* CelloTableViewCell.swift in Sources */,
+				A447FE8529BA2DC700454027 /* ANTModel.xcdatamodeld in Sources */,
 				A4108A75299E746200B01B2C /* HomeController.swift in Sources */,
 				A4D0DDBF2982C936005CC134 /* ViewController.swift in Sources */,
 				A4B38FF629B0F08A00866F3E /* LogTableViewController.swift in Sources */,
@@ -486,6 +494,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A447FE8329BA2DC700454027 /* ANTModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A447FE8429BA2DC700454027 /* ANTModel.xcdatamodel */,
+			);
+			currentVersion = A447FE8429BA2DC700454027 /* ANTModel.xcdatamodel */;
+			path = ANTModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A4D0DDAF2982C936005CC134 /* Project object */;
 }

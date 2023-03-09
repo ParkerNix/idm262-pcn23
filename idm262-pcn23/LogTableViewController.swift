@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class LogTableViewController: UITableViewController {
     
     // Global VARS
     var titles: [String] = ["Today", "Yesterday", "A week ago", "BIRTHDAY!!!", "Almost time...", "yayyyy"]
+    
+    //link log core data to logObj
+    var logObj: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,25 @@ class LogTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Logs")
+        
+        do {
+            logObj = try managedContent.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Nope cause \(error), \(error.userInfo)")
+        }
+    }
+    
 
     // MARK: - Table view data source
 
@@ -31,14 +54,21 @@ class LogTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titles.count
+        // return titles.count
+        return logObj.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cello", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cello", for: indexPath) as! CelloTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = titles[indexPath.row]
+        //cell.textLabel?.text = titles[indexPath.row]
+        
+        // cell.titleLabel.text = titles[indexPath.row]
+        
+        let thisRow = logObj[indexPath.row]
+        
+        cell.titleLabel?.text = thisRow.value(forKey: "title") as? String
 
         return cell
     }
@@ -50,13 +80,24 @@ class LogTableViewController: UITableViewController {
         return true
     }
     */
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete from array.
-            titles.remove(at: indexPath.row)
-            // Reload from table.
+            let oneTitle = logObj[indexPath.row]
+            
+            context.delete(oneTitle)
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do {
+                logObj = try context.fetch(Logs.fetchRequest())
+                print("title fetch done" + String(logObj.count))
+            } catch {
+                print("wrong")
+            }
             tableView.reloadData()
         } /* else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -91,7 +132,8 @@ class LogTableViewController: UITableViewController {
             }
             
             //update array.
-            self.titles.append(titleToSave)
+            // self.titles.append(titleToSave)
+            self.saveToCore(title: titleToSave)
             //rebuild table.
             self.tableView.reloadData()
         }
@@ -103,6 +145,28 @@ class LogTableViewController: UITableViewController {
         alertObj.addAction(cancelAction)
             
         present(alertObj, animated: true)
+    }
+    
+    func saveToCore (title: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Logs", in: managedContent)!
+        
+        let log = NSManagedObject(entity: entity, insertInto: managedContent)
+        
+        // target ONE person in entity
+        log.setValue(title, forKey: "title")
+        
+        do {
+            try managedContent.save()
+            logObj.append(log)
+        } catch let error as NSError{
+            print("ya no, \(error), \(error.userInfo)")
+        }
     }
     
 
