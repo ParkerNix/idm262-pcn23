@@ -27,6 +27,7 @@ class LogTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
         super.viewWillAppear(animated)
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -174,10 +175,13 @@ class LogTableViewController: UITableViewController {
     
     var selectRowNum:Int = 0
     var selectRowName:String = ""
+    var selectRowText:String = ""
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectRowNum = indexPath.row
-        selectRowName = titles[selectRowNum]
+        let thisRow = logObj[selectRowNum]
+        selectRowName = (thisRow.value(forKey: "title") as? String)!
+        selectRowText = (thisRow.value(forKey: "text") as? String)!
         
         // Go!
         performSegue(withIdentifier: "showDetail", sender: nil)
@@ -194,6 +198,7 @@ class LogTableViewController: UITableViewController {
             let detailObj = segue.destination as! DetailViewController
             detailObj.indexNum = selectRowNum
             detailObj.indexTitle = selectRowName
+            detailObj.indexText = selectRowText
         }
     }
 

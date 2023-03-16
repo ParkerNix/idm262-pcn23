@@ -12,12 +12,16 @@ class DetailViewController: UIViewController {
     // Set up vars for segue.
     var indexNum:Int?
     var indexTitle:String?
+    var indexText:String?
     
     @IBOutlet weak var titlePlace: UILabel!
-
+    
+    @IBOutlet weak var textPlace: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        titlePlace.text = indexTitle?.uppercased()
+        titlePlace.text = indexTitle
+        textPlace.text = indexText
 
         // Do any additional setup after loading the view.
     }

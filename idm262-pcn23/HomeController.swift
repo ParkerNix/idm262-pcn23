@@ -7,10 +7,14 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 var audiopuraiya = AVAudioPlayer()
 
 class HomeController: UIViewController {
+    
+    //link log core data to logObj
+    var logObj: [NSManagedObject] = []
     
     @IBOutlet weak var titleBox: UITextField!
     
@@ -19,6 +23,24 @@ class HomeController: UIViewController {
     @IBOutlet weak var Heystack: UIStackView!
     
     @IBOutlet weak var printView: UIStackView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Logs")
+        
+        do {
+            logObj = try managedContent.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Nope cause \(error), \(error.userInfo)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +68,39 @@ class HomeController: UIViewController {
         } else {
             audiopuraiya.play()
             print("TURN IT UP")
+        }
+        
+        let titleToSave:String = titleBox.text!
+        let textToSave:String = textBox.text!
+        
+        //update array.
+        // self.titles.append(titleToSave)
+        self.saveToCore(title: titleToSave, text: textToSave)
+    }
+    
+    func saveToCore (title: String, text: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Logs", in: managedContent)!
+        
+        let log = NSManagedObject(entity: entity, insertInto: managedContent)
+        
+        // target ONE person in entity
+        log.setValue(title, forKey: "title")
+        log.setValue(text, forKey: "text")
+        
+        do {
+            try managedContent.save()
+            logObj.append(log)
+            print("it did it.")
+            titleBox.text = ""
+            textBox.text = ""
+        } catch let error as NSError{
+            print("ya no, \(error), \(error.userInfo)")
         }
     }
 
