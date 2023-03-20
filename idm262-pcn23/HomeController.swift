@@ -20,8 +20,6 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var textBox: UITextView!
     
-    @IBOutlet weak var Heystack: UIStackView!
-    
     @IBOutlet weak var printView: UIStackView!
     
     override func viewWillAppear(_ animated: Bool) {

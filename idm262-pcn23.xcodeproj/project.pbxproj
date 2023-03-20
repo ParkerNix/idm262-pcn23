@@ -34,6 +34,7 @@
 		A47477BF29A7B59600D5FA92 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A47477B329A7B59600D5FA92 /* OpenSans-Regular.ttf */; };
 		A47477C029A7B59600D5FA92 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A47477B429A7B59600D5FA92 /* OpenSans-BoldItalic.ttf */; };
 		A47477C229A7B8D400D5FA92 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = A47477C129A7B8D400D5FA92 /* sounds */; };
+		A4A4459029C8CFC7001224BE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4458F29C8CFC7001224BE /* HomeTableViewController.swift */; };
 		A4B38FF629B0F08A00866F3E /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B38FF529B0F08A00866F3E /* LogTableViewController.swift */; };
 		A4B38FF829B1001100866F3E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B38FF729B1001100866F3E /* DetailViewController.swift */; };
 		A4D0DDBB2982C936005CC134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0DDBA2982C936005CC134 /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		A47477B329A7B59600D5FA92 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A47477B429A7B59600D5FA92 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A47477C129A7B8D400D5FA92 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = "idm262-pcn23/sounds"; sourceTree = SOURCE_ROOT; };
+		A4A4458F29C8CFC7001224BE /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		A4B38FF529B0F08A00866F3E /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 		A4B38FF729B1001100866F3E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A4D0DDB72982C936005CC134 /* idm262-pcn23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm262-pcn23.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 				A4D0DDC02982C936005CC134 /* Main.storyboard */,
 				A447FE8329BA2DC700454027 /* ANTModel.xcdatamodeld */,
 				A4B38FF529B0F08A00866F3E /* LogTableViewController.swift */,
+				A4A4458F29C8CFC7001224BE /* HomeTableViewController.swift */,
 				A4B38FF729B1001100866F3E /* DetailViewController.swift */,
 				A47477C129A7B8D400D5FA92 /* sounds */,
 				A4108A74299E746200B01B2C /* HomeController.swift */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A4459029C8CFC7001224BE /* HomeTableViewController.swift in Sources */,
 				A447FE8229BA288600454027 /* CelloTableViewCell.swift in Sources */,
 				A447FE8529BA2DC700454027 /* ANTModel.xcdatamodeld in Sources */,
 				A4108A75299E746200B01B2C /* HomeController.swift in Sources */,
