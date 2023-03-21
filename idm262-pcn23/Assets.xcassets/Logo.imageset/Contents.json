@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ph_moon-stars.png",
+      "filename" : "ph_moon-stars-4.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ph_moon-stars-2.png",
+      "filename" : "ph_moon-stars-5.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ph_moon-stars-3.png",
+      "filename" : "ph_moon-stars-6.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

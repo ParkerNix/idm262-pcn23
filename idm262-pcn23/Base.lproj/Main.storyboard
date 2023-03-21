@@ -215,7 +215,7 @@
                                     <segue destination="L0V-3r-NNE" kind="presentation" id="4AN-uN-fO6"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-oY-dGS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-oY-dGS">
                                 <rect key="frame" x="275" y="77" width="94" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="BSi-3n-qp5"/>
@@ -260,7 +260,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="814.66668701171875" height="806"/>
+        <image name="Logo" width="814.66668701171875" height="806"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="questionmark.bubble.fill" catalog="system" width="128" height="110"/>
