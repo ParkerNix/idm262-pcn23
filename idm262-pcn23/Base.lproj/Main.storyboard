@@ -119,8 +119,8 @@
                                         <color key="textColor" name="Primary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the home screen to add more!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-xC-s9W">
-                                        <rect key="frame" x="34.666666666666657" y="103" width="276" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe down to add more entries!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-xC-s9W">
+                                        <rect key="frame" x="47.000000000000014" y="103" width="251.33333333333337" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" name="Primary"/>
                                         <nil key="highlightedColor"/>
@@ -217,10 +217,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-oY-dGS">
-                                <rect key="frame" x="146.66666666666666" y="542.33333333333337" width="100" height="100"/>
+                                <rect key="frame" x="275" y="77" width="94" height="94"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="BSi-3n-qp5"/>
-                                    <constraint firstAttribute="width" constant="100" id="Wc9-yb-PGC"/>
+                                    <constraint firstAttribute="height" constant="94" id="BSi-3n-qp5"/>
+                                    <constraint firstAttribute="width" constant="94" id="Wc9-yb-PGC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -236,8 +236,8 @@
                             <constraint firstItem="lBF-B8-mfe" firstAttribute="trailing" secondItem="Erl-fw-s2X" secondAttribute="trailing" id="Md7-Uw-SWS"/>
                             <constraint firstItem="Erl-fw-s2X" firstAttribute="centerX" secondItem="b2G-cE-5Mf" secondAttribute="centerX" id="NRv-vp-jix"/>
                             <constraint firstItem="POF-E3-bJ1" firstAttribute="top" secondItem="lBF-B8-mfe" secondAttribute="bottom" constant="24" id="RTr-89-6pd"/>
-                            <constraint firstItem="ds2-oY-dGS" firstAttribute="top" secondItem="POF-E3-bJ1" secondAttribute="bottom" constant="24" id="Rbu-Fk-a5o"/>
-                            <constraint firstItem="ds2-oY-dGS" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" id="Srl-Yf-EOT"/>
+                            <constraint firstItem="ds2-oY-dGS" firstAttribute="top" secondItem="POF-E3-bJ1" secondAttribute="bottom" constant="-441.33333333333337" id="Rbu-Fk-a5o"/>
+                            <constraint firstItem="ds2-oY-dGS" firstAttribute="centerX" secondItem="Di5-qw-eAN" secondAttribute="centerX" constant="125.5" id="Srl-Yf-EOT"/>
                             <constraint firstItem="LOD-1X-iqc" firstAttribute="leading" secondItem="Jar-DX-ukN" secondAttribute="leading" id="eHI-Rk-LhR"/>
                             <constraint firstItem="Jar-DX-ukN" firstAttribute="leading" secondItem="Di5-qw-eAN" secondAttribute="leading" constant="24" id="fK0-EP-sTF"/>
                             <constraint firstItem="MaP-Z2-Usb" firstAttribute="top" secondItem="LOD-1X-iqc" secondAttribute="bottom" constant="24" id="haK-9g-kTH"/>
